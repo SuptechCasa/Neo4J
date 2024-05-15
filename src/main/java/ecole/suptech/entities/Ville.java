@@ -1,5 +1,8 @@
 package ecole.suptech.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
@@ -10,11 +13,9 @@ import lombok.NoArgsConstructor;
 
 @Node
 @NoArgsConstructor @AllArgsConstructor @Data
-public class Personne {
+public class Ville {
 @Id
 Long id;
-String nom;
-int age;
-@Relationship(type = "reside_dans",direction = Relationship.Direction.OUTGOING)
-Ville ville;
+String nomville;
+
 }
